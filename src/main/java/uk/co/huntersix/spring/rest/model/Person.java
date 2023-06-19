@@ -3,14 +3,16 @@ package uk.co.huntersix.spring.rest.model;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class Person {
-    private final AtomicLong counter = new AtomicLong();
+	//Exercise 1 (Adding static keyword)
+    private static final AtomicLong counter = new AtomicLong();
 
     private Long id;
     private String firstName;
     private String lastName;
 
-    private Person() {
-        // empty
+    @SuppressWarnings("unused")
+	private Person() {
+       
     }
 
     public Person(String firstName, String lastName) {
